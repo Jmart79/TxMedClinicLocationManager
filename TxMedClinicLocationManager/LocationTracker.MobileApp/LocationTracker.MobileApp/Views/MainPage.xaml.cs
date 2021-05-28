@@ -14,5 +14,14 @@ namespace LocationTracker.MobileApp
         {
             InitializeComponent();
         }
+
+        private void AdminClicked(object sender, EventArgs e)
+        {
+
+        }
+        private void DoctorClicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
