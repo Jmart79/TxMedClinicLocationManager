@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LocationTracker.Data
+namespace LocationTracker.Data.Models
 {
     public class Clinic
     {

@@ -1,3 +1,4 @@
+using LocationTracker.Data.DB;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -11,6 +12,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
+
 
 namespace LocationTracker.API
 {
@@ -28,6 +31,9 @@ namespace LocationTracker.API
         {
 
             services.AddControllers();
+
+          //  services.AddDbContext<LocationTrackerContext>(options => options.UseSqlServer(Configuration.GetConnectionString("LocationTrackerContext")));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "LocationTracker.API", Version = "v1" });

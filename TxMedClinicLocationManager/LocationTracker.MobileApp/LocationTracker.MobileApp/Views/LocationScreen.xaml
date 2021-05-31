@@ -4,7 +4,9 @@
              x:Class="LocationTracker.MobileApp.Views.LocationScreen">
     <ContentPage.Content>
         <StackLayout>
-           
+        <Label x:Name="DoctorLocationLabel" Text="{Binding DoctorLocationLabel}"/>
+            <StackLayout x:Name="LocationsButtonContainer">
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

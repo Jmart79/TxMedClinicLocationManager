@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LocationTracker.Data;
+using LocationTracker.MobileApp.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -15,13 +17,13 @@ namespace LocationTracker.MobileApp
             InitializeComponent();
         }
 
-        private void AdminClicked(object sender, EventArgs e)
+        private async void AdminClicked(object sender, EventArgs e)
         {
-
+           await Navigation.PushAsync(new LocationScreen(new Admin()));
         }
-        private void DoctorClicked(object sender, EventArgs e)
+        private async void DoctorClicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new LocationScreen(new Doctor()));
         }
     }
 }

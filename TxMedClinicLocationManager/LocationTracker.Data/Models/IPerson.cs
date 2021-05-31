@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LocationTracker.Data
+namespace LocationTracker.Data.Models
 {
     public interface IPerson
     {
-        public string Role { get;  set; }
+         string Role { get;  set; }
 
     }
 }
