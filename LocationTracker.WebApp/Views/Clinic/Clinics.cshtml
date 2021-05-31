@@ -1,0 +1,35 @@
+﻿@model ClinicManager
+
+@{
+    if (Model.User.Role == "doctor")
+    {
+        var doctor = Model.User as Doctor;
+        var locationMessage = $"Your current location is {doctor.Location}";
+        <label>@locationMessage</label>
+        
+        <div class="ClinicsContainer">
+            @{
+                foreach (var clinic in Model.Clinics)
+                {
+                    var clinicLocationLabel = $"{clinic.ClinicName} {clinic.City}";
+                    
+                    <button><a href="~/Users/UpdateDoctor?doctorId=1&&location=@clinicLocationLabel"></a></button>
+                }
+            }
+        </div>
+    }
+    else
+    {
+        <div class="ClinicsContainer">
+            @{
+                foreach (var clinic in Model.Clinics)
+                {
+                    var clinicLocationLabel = $"{clinic.ClinicName} {clinic.City}";
+                    <button><a href="~/Clinics/ClinicInfo?@clinicLocationLabel"></a></button>
+                }
+            }
+        </div>
+    }
+
+}
+
